@@ -1,0 +1,27 @@
+query Page($slug: String!) {
+  page(where: { slug: $slug }) {
+    slug
+    ogTitle
+    ogDescription
+    ogImage
+    navigationLabel
+    blocks {
+      ... on Copy {
+        id
+        componentName
+        copy {
+          html
+        }
+      }
+      ... on SingleImage {
+        id
+        componentName
+        cloudinaryImage
+      }
+      ... on List {
+        id
+        componentName
+      }
+    }
+  }
+}

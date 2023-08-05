@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client'],
 
   googleFonts: {
     display: 'swap',
