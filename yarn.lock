@@ -542,6 +542,33 @@
   dependencies:
     mime "^3.0.0"
 
+"@cloudinary-util/url-loader@^3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@cloudinary-util/url-loader/-/url-loader-3.10.0.tgz#30dbed4d60968687c9161a60b246da62d42c3e33"
+  integrity sha512-RNp6WayU6e5ikA7yCRqNhp0lOwLl82vLco9EwpES2si6Hb+g9yEaeTYvobD44ISQeJUnPl6e1c/AEYVSjfzwrg==
+  dependencies:
+    "@cloudinary-util/util" "2.2.1"
+    "@cloudinary/url-gen" "^1.10.2"
+
+"@cloudinary-util/util@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@cloudinary-util/util/-/util-2.2.1.tgz#c482d9321d37d921b347858a121c161b68782bd3"
+  integrity sha512-MEIqn5WtPP3mxSMTNNfpqlGS1UquAXcjmVdY/t/edD/ZWVjI85viBiOMIuF0W6n6UF5gTstLymfQNYx0YO/GZg==
+
+"@cloudinary/transformation-builder-sdk@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@cloudinary/transformation-builder-sdk/-/transformation-builder-sdk-1.5.1.tgz#8ed5ef27fc6b66c09cfc183649b1c69459149619"
+  integrity sha512-7pTKgyrX49T3Qk0+bE/RN7bijGVRPusDXjRHJyO5a7H6CnL1sZ/TvTMAKvXweFLTOpWzWFW6nS0Bah3kBvTb7w==
+  dependencies:
+    "@cloudinary/url-gen" "^1.7.0"
+
+"@cloudinary/url-gen@^1.10.2", "@cloudinary/url-gen@^1.7.0":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.11.1.tgz#751ac0d6101d687433f631e848700fd722ae5d69"
+  integrity sha512-j5nYZOMeB4Ht1W8C6RXEvVNJVME1sObxtdgtnJDiGcBQmwI1EsCedSQSzkJoely3jhx+yI6WGCLGniF/PE+Idw==
+  dependencies:
+    "@cloudinary/transformation-builder-sdk" "^1.5.1"
+
 "@csstools/cascade-layer-name-parser@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@csstools/cascade-layer-name-parser/-/cascade-layer-name-parser-1.0.4.tgz#3ff490b84660dc0592b4315029f22908f3de0577"
@@ -1541,7 +1568,7 @@
   optionalDependencies:
     ipx "^0.9.9"
 
-"@nuxt/kit@3.6.5", "@nuxt/kit@^3.5.3", "@nuxt/kit@^3.6.3", "@nuxt/kit@^3.6.5":
+"@nuxt/kit@3.6.5", "@nuxt/kit@^3.5.0", "@nuxt/kit@^3.5.3", "@nuxt/kit@^3.6.3", "@nuxt/kit@^3.6.5":
   version "3.6.5"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.6.5.tgz#208777acdc2a09109fbe4209aad736874eb9a3f5"
   integrity sha512-uBI5I2Zx6sk+vRHU+nBmifwxg/nyXCGZ1g5hUKrUfgv1ZfiKB8JkN5T9iRoduDOaqbwM6XSnEl1ja73iloDcrw==
@@ -1663,6 +1690,16 @@
     vite-node "^0.33.0"
     vite-plugin-checker "^0.6.1"
     vue-bundle-renderer "^1.0.3"
+
+"@nuxtjs/cloudinary@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/cloudinary/-/cloudinary-2.3.1.tgz#4c2a86f70d00b4c75a3889c23b75f389ecffa56f"
+  integrity sha512-gVURxdLzAOPpcw/daopVkD+0rymwauKN1S+X4/dsQOMr/cq6vPUOCBJ0MnfXzk+PJ/WVoO41sLNFESWOFVaK/g==
+  dependencies:
+    "@cloudinary-util/url-loader" "^3.10.0"
+    "@nuxt/kit" "^3.5.0"
+    "@unpic/vue" "^0.0.23"
+    defu "^6.1.2"
 
 "@nuxtjs/google-fonts@^3.0.2":
   version "3.0.2"
@@ -2063,6 +2100,21 @@
     "@unhead/shared" "1.2.1"
     hookable "^5.5.3"
     unhead "1.2.1"
+
+"@unpic/core@^0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@unpic/core/-/core-0.0.24.tgz#f357c4ee5957673e452a9aad5718819f15bc2cfc"
+  integrity sha512-HFa7ry3iNYfIOkaWGb0N/w1sxt6MAyUfoXXOvjyz50vtomDUbxK4krcRcQWIca64bORQKncxeJbGETRQLF20WQ==
+  dependencies:
+    unpic "^3.6.1"
+
+"@unpic/vue@^0.0.23":
+  version "0.0.23"
+  resolved "https://registry.yarnpkg.com/@unpic/vue/-/vue-0.0.23.tgz#2928ac38453086c229a0b89f091213369fffa85b"
+  integrity sha512-HD3EYKHCQhlpAmFZwJ+1Tox8PCpC8q9P8JkEJVFpxe7YlvIaNlTVai0BGSsu6NOi8FRCfFeNXlC4LR4pKNjdxg==
+  dependencies:
+    "@unpic/core" "^0.0.24"
+    vue "^3.2.47"
 
 "@vercel/nft@^0.22.6":
   version "0.22.6"
@@ -8462,6 +8514,11 @@ unixify@^1.0.0:
   dependencies:
     normalize-path "^2.1.1"
 
+unpic@^3.6.1:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/unpic/-/unpic-3.10.0.tgz#5f5333b98aaa1c2e30e5c49fa8ba01a7a89cf5ff"
+  integrity sha512-EkAvWAd83f7JujI4414AgN2tW3iq1AVBaRr90/BkbB3ADPSj83cLTe07SLXOImh3NjLUlWlHwIB7HLDQbORfrg==
+
 unplugin-vue-router@^0.6.4:
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/unplugin-vue-router/-/unplugin-vue-router-0.6.4.tgz#d8d1b6f691d92669868d7d9a8a3fa72b48b23401"
@@ -8759,7 +8816,7 @@ vue-router@^4.2.4:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue@^3.3.4:
+vue@^3.2.47, vue@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.3.4.tgz#8ed945d3873667df1d0fcf3b2463ada028f88bd6"
   integrity sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==

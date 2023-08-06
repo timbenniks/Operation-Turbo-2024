@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-defineProps(["id", "componentName", "copy"]);
+defineProps(["id", "componentName", "space", "copy"]);
 </script>
 
 <template>
-  <div class="mb-8">
-    <p font="font-bold">Rich Text component</p>
-    <p>{{ id }} - {{ componentName }}</p>
+  <div :class="space ? 'mb-8' : 'mb-4'">
+    <div v-html="copy.html" />
   </div>
 </template>

@@ -9,6 +9,7 @@ query Page($slug: String!) {
       ... on Copy {
         id
         componentName
+        space
         copy {
           html
         }
@@ -17,6 +18,7 @@ query Page($slug: String!) {
         id
         componentName
         cloudinaryImage
+        space
       }
       ... on List {
         id

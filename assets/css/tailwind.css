@@ -6,10 +6,6 @@ body {
   @apply bg-slate-900 text-slate-400;
 }
 
-.title {
-  @apply text-slate-200 font-bold;
-}
-
 a {
   @apply text-white hover:text-slate-400 hover:underline;
 }
@@ -31,4 +27,16 @@ a {
   display: grid;
   grid-template-columns: 400px 2fr;
   gap: 0 2rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fancy-image {
+  @apply border-2;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(89.87deg, #256ad1 7.57%, #d1258c 95.58%);
 }
