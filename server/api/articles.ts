@@ -21,5 +21,5 @@ export default defineEventHandler(async (event) => {
     finalResult = articles.filter(article => String(article.collection_id) === String(collection_id))
   }
 
-  return finalResult.slice(0, per_page ? Number(per_page) : finalResult.length)
+  return { articles: finalResult.slice(0, per_page ? Number(per_page) : finalResult.length) }
 })
