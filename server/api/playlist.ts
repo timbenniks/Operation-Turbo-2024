@@ -1,9 +1,9 @@
 import { toVideo } from "../../helpers"
 
 export default defineEventHandler(async (event) => {
-  const { id, count } = getQuery(event)
+  const { playlist_id, per_page } = getQuery(event)
 
-  const data = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${id}&key=${process.env.YOUTUBE_KEY}&maxResults=${count || 5}`)
+  const data = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlist_id}&key=${process.env.YOUTUBE_KEY}&maxResults=${per_page || 5}`)
 
   const result = await data.json()
   let response;
