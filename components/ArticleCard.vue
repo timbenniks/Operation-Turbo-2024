@@ -36,7 +36,7 @@ const computedDate = computed(() => {
           :href="url"
           rel="noopener"
           target="_blank"
-          class="font-medium text-lg hover:text-pink-600 line-clamp-1"
+          class="font-medium text-lg hover:text-pink-500 line-clamp-1"
         >
           {{ title }}
         </a>

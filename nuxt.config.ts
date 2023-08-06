@@ -10,6 +10,12 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client', '@nuxtjs/cloudinary'],
 
+  head: {
+    htmlAttrs: {
+      lang: "en",
+    },
+  },
+
   googleFonts: {
     display: 'swap',
     prefetch: true,

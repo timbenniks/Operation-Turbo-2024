@@ -23,13 +23,13 @@ const upcoming = ref(!isDateBeforeToday(new Date(props.date)));
 
 <template>
   <li class="pb-6 mb-6 border-b border-b-slate-700">
-    <p v-if="upcoming" class="text-pink-600 text-sm uppercase">Upcoming</p>
+    <p v-if="upcoming" class="text-pink-500 text-sm uppercase">Upcoming</p>
     <p>
       <a
         :href="link"
         rel="noopener"
         target="_blank"
-        class="font-medium text-lg hover:text-pink-600"
+        class="font-medium text-lg hover:text-pink-500"
       >
         {{ conference }}
       </a>
