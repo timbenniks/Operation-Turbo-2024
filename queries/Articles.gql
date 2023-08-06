@@ -1,0 +1,16 @@
+query Articles($username: String!, $per_page: Int!, $collection_id: Int!) {
+  articledatacollection(
+    username: $username
+    per_page: $per_page
+    collection_id: $collection_id
+  ) {
+    articles {
+      title
+      collection_id
+      description
+      image
+      published_timestamp
+      url
+    }
+  }
+}

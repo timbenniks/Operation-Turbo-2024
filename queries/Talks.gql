@@ -1,5 +1,5 @@
 query Talks($first: Int!) {
-  talks(first: $first) {
+  talks(first: $first, orderBy: date_DESC) {
     conference
     talk
     location

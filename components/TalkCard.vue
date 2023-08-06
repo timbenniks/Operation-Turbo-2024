@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { isDateBeforeToday } from "../helpers";
+
 const props = defineProps([
   "conference",
   "talk",
@@ -15,10 +17,13 @@ const computedDate = computed(() => {
     day: "numeric",
   });
 });
+
+const upcoming = ref(!isDateBeforeToday(new Date(props.date)));
 </script>
 
 <template>
   <li class="pb-6 mb-6 border-b border-b-slate-700">
+    <p v-if="upcoming" class="text-pink-600 text-sm uppercase">Upcoming</p>
     <p>
       <a
         :href="link"
@@ -29,7 +34,7 @@ const computedDate = computed(() => {
         {{ conference }}
       </a>
     </p>
-    <p class="mb-2">{{ talk }}</p>
+    <p class="mb-2 text-sm">{{ talk }}</p>
     <p class="space-x-2">
       <span
         class="inline-block rounded-full bg-pink-400/10 px-3 py-1 text-xs font-medium leading-5 text-pink-300"

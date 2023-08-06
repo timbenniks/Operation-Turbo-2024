@@ -4,6 +4,13 @@ import { metaData } from "../helpers";
 
 const { page } = await GqlPage({ slug: "home" });
 const { talks } = await GqlTalks({ first: 5 });
+const {
+  articledatacollection: { articles },
+} = await GqlArticles({
+  username: "timbenniks",
+  per_page: 5,
+  collection_id: 22300,
+});
 
 // @ts-ignore
 useSeoMeta(metaData("home", page));
@@ -23,12 +30,27 @@ useSeoMeta(metaData("home", page));
         v-bind="block"
       />
 
-      <div class="mt-12">
-        <h2 class="text-slate-200 font-medium text-3xl mb-8">Latest talks</h2>
-        <ul>
-          <talk v-for="talk in talks" :key="talk.id" v-bind="talk" />
-        </ul>
-      </div>
+      <two-column class="mt-12">
+        <template v-slot:sidea>
+          <h2 class="text-slate-200 font-medium text-3xl mb-8">Latest talks</h2>
+          <ul>
+            <talk-card v-for="talk in talks" :key="talk.id" v-bind="talk" />
+          </ul>
+        </template>
+
+        <template v-slot:sideb>
+          <h2 class="text-slate-200 font-medium text-3xl mb-8">
+            Latest Articles
+          </h2>
+          <ul>
+            <article-card
+              v-for="article in articles"
+              :key="article.published_timestamp"
+              v-bind="article"
+            />
+          </ul>
+        </template>
+      </two-column>
     </main>
   </div>
 </template>

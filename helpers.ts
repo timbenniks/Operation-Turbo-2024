@@ -29,6 +29,10 @@ export function metaData(slug: string, page: pageMeta) {
   }
 }
 
+export function isDateBeforeToday(date: Date) {
+  return new Date(date.toDateString()) < new Date(new Date().toDateString());
+}
+
 export function toVideo(video: any, fromPlaylist: boolean) {
   return {
     date: video.snippet.publishedAt,
