@@ -15,5 +15,5 @@ export default defineEventHandler(async (event) => {
     response = result.items.map(video => (toVideo(video, true))).filter((video) => video.title !== 'Deleted video')
   }
 
-  return { result: response }
+  return response
 })
