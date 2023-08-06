@@ -1,0 +1,11 @@
+query Playlist($playlist_id: String!, $per_page: Int!) {
+  videoDataCollection(playlist_id: $playlist_id, per_page: $per_page) {
+    videos {
+      date
+      description
+      image
+      title
+      videoId
+    }
+  }
+}

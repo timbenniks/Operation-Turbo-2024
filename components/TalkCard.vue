@@ -41,7 +41,7 @@ const upcoming = ref(!isDateBeforeToday(new Date(props.date)));
       >
         {{ computedDate }}
       </span>
-      <span>
+      <span class="text-sm">
         {{ location }}
       </span>
     </p>

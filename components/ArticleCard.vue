@@ -18,7 +18,7 @@ const computedDate = computed(() => {
 </script>
 
 <template>
-  <li class="pb-6 mb-6 border-b border-b-slate-700 flex">
+  <li class="mb-10 flex">
     <CldImage
       width="160"
       height="90"

@@ -12,6 +12,13 @@ const {
   collection_id: 22300,
 });
 
+const {
+  videoDataCollection: { videos },
+} = await GqlPlaylist({
+  playlist_id: "UULFbQu3ix36SHZjcD57BK7KUQ",
+  per_page: 3,
+});
+
 // @ts-ignore
 useSeoMeta(metaData("home", page));
 </script>
@@ -22,15 +29,29 @@ useSeoMeta(metaData("home", page));
       <hero />
       <navigation />
     </section>
-    <main class="pr-12 pt-6">
-      <component
-        v-for="block in page?.blocks"
-        :is="mapping[block?.componentName]"
-        :key="(block?.id as string)"
-        v-bind="block"
-      />
+    <main class="pr-4 md:pr-12 pt-6">
+      <section class="mb-12">
+        <component
+          v-for="block in page?.blocks"
+          :is="mapping[block?.componentName]"
+          :key="(block?.id as string)"
+          v-bind="block"
+        />
+      </section>
 
-      <two-column class="mt-12">
+      <div class="mb-16">
+        <h2 class="text-slate-200 font-medium text-3xl mb-4">Latest Videos</h2>
+
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <video-card
+            v-for="video in videos"
+            :key="video.videoId"
+            v-bind="video"
+          />
+        </ul>
+      </div>
+
+      <two-column class="mb-16">
         <template v-slot:sidea>
           <h2 class="text-slate-200 font-medium text-3xl mb-8">Latest talks</h2>
           <ul>
