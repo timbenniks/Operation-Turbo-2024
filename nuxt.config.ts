@@ -8,12 +8,11 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client', '@nuxtjs/cloudinary'],
-
-  head: {
-    htmlAttrs: {
-      lang: "en",
-    },
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client', '@nuxtjs/cloudinary', '@nuxt/image'],
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/dwfcofnrd/image/upload/'
+    }
   },
 
   googleFonts: {
