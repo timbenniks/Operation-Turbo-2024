@@ -3,7 +3,7 @@ defineProps(["image", "alt", "loading", "basewidth"]);
 </script>
 
 <template>
-  <div class="w-full aspect-video">
+  <div class="w-full aspect-[16/9]">
     <img
       :src="
         image.secure_url.replace(

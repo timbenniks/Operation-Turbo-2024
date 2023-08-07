@@ -4,16 +4,15 @@ const props = defineProps(["title", "videoId", "description", "image", "date"]);
 
 <template>
   <li>
-    <CldImage
-      width="310"
-      height="175"
-      crop="limit"
-      :src="image"
-      sizes="310px"
-      :alt="title"
-      class="fancy-image md:mr-2 mb-4"
-      delivery-type="fetch"
-    />
+    <div class="w-full aspect-[16/9]">
+      <img
+        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/c_limit,w_auto/${image}`"
+        :alt="title"
+        width="310"
+        height="175"
+        class="fancy-image w-full object-cover"
+      />
+    </div>
 
     <p>
       <a

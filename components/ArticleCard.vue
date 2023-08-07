@@ -19,18 +19,17 @@ const computedDate = computed(() => {
 
 <template>
   <li class="mb-10 flex">
-    <CldImage
-      width="160"
-      height="90"
-      crop="limit"
-      :src="image"
-      sizes="160px"
-      :alt="title"
-      class="fancy-image mr-2 mt-1"
-      delivery-type="fetch"
-    />
+    <div class="aspect-[16/9] mr-2 w-2/5">
+      <img
+        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/w_auto,ar_16:9/${image}`"
+        :alt="title"
+        width="310"
+        height="175"
+        class="fancy-image w-full object-contain"
+      />
+    </div>
 
-    <div>
+    <div class="w-3/5">
       <p>
         <a
           :href="url"

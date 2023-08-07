@@ -5,7 +5,7 @@ defineProps(["id", "componentName", "space", "cloudinaryImage"]);
 <template>
   <cloudinary-image
     :image="cloudinaryImage"
-    loading="lazy"
+    loading="eager"
     :class="space ? 'mb-8' : 'mb-4'"
   />
 </template>
