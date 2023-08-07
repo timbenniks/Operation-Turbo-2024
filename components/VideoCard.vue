@@ -4,7 +4,7 @@ const props = defineProps(["title", "videoId", "description", "image", "date"]);
 
 <template>
   <li>
-    <div class="w-full aspect-[16/9]">
+    <div class="w-full aspect-[16/9] mb-4">
       <img
         :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/c_limit,w_auto/${image}`"
         :alt="title"

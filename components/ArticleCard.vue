@@ -21,7 +21,7 @@ const computedDate = computed(() => {
   <li class="mb-10 flex">
     <div class="aspect-[16/9] mr-2 w-2/5">
       <img
-        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/w_auto,ar_16:9/${image}`"
+        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/w_auto/${image}`"
         :alt="title"
         width="310"
         height="175"

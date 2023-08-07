@@ -38,10 +38,12 @@ useHead({
 </script>
 
 <template>
-  <div class="mt-4 ml-4 md:mt-12 md:ml-12 max-w-[1440px] wrapper">
-    <section>
-      <hero />
-      <navigation />
+  <div class="mt-4 ml-4 lg:mt-12 lg:ml-12 max-w-[1440px] wrapper">
+    <section class="mb-8 lg:mb-0">
+      <div class="static lg:sticky lg:top-12">
+        <hero />
+        <navigation />
+      </div>
     </section>
     <main class="pr-4 md:pr-12 pt-6">
       <section class="mb-12">

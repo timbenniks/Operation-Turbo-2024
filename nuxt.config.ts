@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client', '@nuxtjs/cloudinary', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client'],
   image: {
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/dwfcofnrd/image/upload/'
