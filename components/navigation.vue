@@ -29,7 +29,7 @@ const open = ref(false);
     class="mt-8 lg:mt-28 font-bold text-md space-y-2 navigation lg:block"
   >
     <li class="mb-4 hidden lg:block">
-      <nuxt-link to="/" rel="noopener"><tim /></nuxt-link>
+      <nuxt-link to="/" rel="noopener" title="Tim's Logo"><tim /></nuxt-link>
     </li>
     <li><nuxt-link to="/about" rel="noopener">About</nuxt-link></li>
     <li><nuxt-link to="/videos" rel="noopener">Videos</nuxt-link></li>
