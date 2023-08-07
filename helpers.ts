@@ -11,7 +11,7 @@ export type pageMeta = {
 }
 
 export function metaData(slug: string, page: pageMeta) {
-  if (slug === 'home') {
+  if (slug === 'home' || slug === 'about') {
     return {
       title: page?.ogTitle,
       ogTitle: page?.ogTitle,
