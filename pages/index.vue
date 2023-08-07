@@ -24,7 +24,7 @@ useSeoMeta(metaData("home", page));
 
 useHead({
   meta: [
-    { "http-equiv": "accept-ch", content: "Dpr, Viewport-Width, Width" },
+    { "http-equiv": "accept-ch", content: "dpr, viewport-width, width" },
     {
       "http-equiv": "delegate-ch",
       content:
