@@ -20,9 +20,43 @@ query Page($slug: String!) {
         cloudinaryImage
         space
       }
-      ... on List {
+      ... on TwoColumn {
         id
+        space
+        title
         componentName
+        sideA {
+          ... on Copy {
+            id
+            componentName
+            copy {
+              html
+            }
+            space
+          }
+          ... on SingleImage {
+            id
+            cloudinaryImage
+            componentName
+            space
+          }
+        }
+        sideB {
+          ... on Copy {
+            id
+            componentName
+            copy {
+              html
+            }
+            space
+          }
+          ... on SingleImage {
+            id
+            cloudinaryImage
+            componentName
+            space
+          }
+        }
       }
     }
   }

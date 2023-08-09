@@ -9,9 +9,9 @@ useSeoMeta(metaData("about", page));
 </script>
 
 <template>
-  <div class="mt-4 ml-4 lg:mt-12 lg:ml-12 max-w-[1280px]">
+  <div class="mt-4 ml-4 lg:mt-12 lg:ml-12 max-w-[1000px]">
     <main class="pr-4 md:pr-12 pt-6">
-      <header class="mb-12">
+      <header class="mb-8">
         <p>
           <nuxt-link to="/" class="underline text-pink-500"
             >&larr; back home</nuxt-link
