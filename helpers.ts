@@ -1,18 +1,8 @@
-export type pageMeta = {
-  title: string
-  ogTitle: string
-  description: string
-  ogDescription: string
-  ogImage: any
-  ogSiteName: string
-  ogType: string
-  twitterCard: string
-  googleSiteVerification: string
-}
+import type { MetaObject } from 'nuxt/schema';
 
-export function metaData(slug: string, page: pageMeta) {
+export function metaData(slug: string, page: any) {
   if (slug === 'home' || slug === 'about') {
-    return {
+    return <MetaObject>{
       title: page?.ogTitle,
       ogTitle: page?.ogTitle,
       description: page?.ogDescription,

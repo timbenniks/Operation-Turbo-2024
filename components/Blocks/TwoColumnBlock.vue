@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { mapping } from "../../components/componentMapper";
-
 defineProps([
   "id",
   "componentName",
@@ -24,21 +22,11 @@ defineProps([
     />
     <two-column class="mb-16">
       <template v-slot:sidea>
-        <component
-          v-for="block in sideA"
-          :is="mapping[block?.componentName]"
-          :key="(block?.id as string)"
-          v-bind="block"
-        />
+        <block-slot :blocks="sideA" />
       </template>
 
       <template v-slot:sideb>
-        <component
-          v-for="block in sideB"
-          :is="mapping[block?.componentName]"
-          :key="(block?.id as string)"
-          v-bind="block"
-        />
+        <block-slot :blocks="sideB" />
       </template>
     </two-column>
   </div>

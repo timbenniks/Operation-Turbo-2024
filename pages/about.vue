@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-import { mapping } from "../components/componentMapper";
 import { metaData } from "../helpers";
-
-const { page } = await GqlPage({ slug: "about" });
-
-// @ts-ignore
-useSeoMeta(metaData("about", page));
+import type { PageQuery, PageQueryVariables } from "#gql";
+import type { MetaObject } from "nuxt/schema";
+const { page } = await GqlPage(<PageQueryVariables>{ slug: "about" });
+useSeoMeta(metaData("about", page as PageQuery) as MetaObject);
 </script>
 
 <template>
@@ -20,12 +18,7 @@ useSeoMeta(metaData("about", page));
         <h1 class="text-slate-200 font-bold text-3xl md:text-4xl">About Tim</h1>
       </header>
       <section class="mb-12">
-        <component
-          v-for="block in page?.blocks"
-          :is="mapping[block?.componentName]"
-          :key="(block?.id as string)"
-          v-bind="block"
-        />
+        <block-slot :blocks="page?.blocks" />
       </section>
     </main>
   </div>

@@ -1,26 +1,33 @@
 <script lang="ts" setup>
-import { mapping } from "../components/componentMapper";
+import type {
+  ArticlesQueryVariables,
+  PageQuery,
+  PlaylistQueryVariables,
+  PageQueryVariables,
+  TalksQueryVariables,
+} from "#gql";
+
+import type { MetaObject } from "nuxt/schema";
 import { metaData } from "../helpers";
 
-const { page } = await GqlPage({ slug: "home" });
-const { talks } = await GqlTalks({ first: 5 });
-const {
-  articledatacollection: { articles },
-} = await GqlArticles({
+const { page } = await GqlPage(<PageQueryVariables>{ slug: "home" });
+const { talks } = await GqlTalks(<TalksQueryVariables>{ first: 5 });
+
+const articleData = await GqlArticles(<ArticlesQueryVariables>{
   username: "timbenniks",
   per_page: 5,
   collection_id: 22300,
 });
 
-const {
-  videoDataCollection: { videos },
-} = await GqlPlaylist({
+const videoData = await GqlPlaylist(<PlaylistQueryVariables>{
   playlist_id: "UULFbQu3ix36SHZjcD57BK7KUQ",
   per_page: 3,
 });
 
-// @ts-ignore
-useSeoMeta(metaData("home", page));
+const articles = computed(() => articleData.articledatacollection?.articles);
+const videos = computed(() => videoData.videoDataCollection?.videos);
+
+useSeoMeta(metaData("home", page as PageQuery) as MetaObject);
 </script>
 
 <template>
@@ -33,12 +40,7 @@ useSeoMeta(metaData("home", page));
     </section>
     <main class="pr-4 md:pr-12 pt-6">
       <section class="mb-12">
-        <component
-          v-for="block in page?.blocks"
-          :is="mapping[block?.componentName]"
-          :key="(block?.id as string)"
-          v-bind="block"
-        />
+        <block-slot :blocks="page?.blocks" />
       </section>
 
       <div class="mb-16">
