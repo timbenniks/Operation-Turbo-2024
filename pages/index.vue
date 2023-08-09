@@ -49,7 +49,7 @@ useSeoMeta(metaData("home", page as PageQuery) as MetaObject);
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <video-card
             v-for="video in videos"
-            :key="video.videoId"
+            :key="video?.videoId as string"
             v-bind="video"
           />
         </ul>
@@ -70,7 +70,7 @@ useSeoMeta(metaData("home", page as PageQuery) as MetaObject);
           <ul>
             <article-card
               v-for="article in articles"
-              :key="article.published_timestamp"
+              :key="article?.published_timestamp as string"
               v-bind="article"
             />
           </ul>

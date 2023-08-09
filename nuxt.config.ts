@@ -1,12 +1,15 @@
 export default defineNuxtConfig({
   experimental: {
-    noVueServer: false
+    noVueServer: true
+    //   componentIslands: true,
+
   },
   nitro: {
     prerender: {
       routes: ["/"]
     }
   },
+
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client'],
   image: {
