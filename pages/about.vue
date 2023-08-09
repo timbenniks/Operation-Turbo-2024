@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { metaData } from "../helpers";
-import type { PageQuery, PageQueryVariables } from "#gql";
+import type { PageQuery } from "#gql";
 import type { MetaObject } from "nuxt/schema";
-const { page } = await GqlPage(<PageQueryVariables>{ slug: "about" });
+
+const page = await useGQLQuery("page", { slug: "about" });
 useSeoMeta(metaData("about", page as PageQuery) as MetaObject);
 </script>
 

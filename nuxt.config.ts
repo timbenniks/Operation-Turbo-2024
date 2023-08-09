@@ -1,8 +1,7 @@
 export default defineNuxtConfig({
   experimental: {
     noVueServer: true
-    //   componentIslands: true,
-
+    // componentIslands: true,
   },
   nitro: {
     prerender: {
@@ -11,7 +10,7 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client', 'nuxt-jsonld'],
   image: {
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/dwfcofnrd/image/upload/'
@@ -27,5 +26,4 @@ export default defineNuxtConfig({
       Inter: [400, 500, 700],
     }
   }
-
 })

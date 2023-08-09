@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { getComponentForName } from "../components/componentMapper";
 
-defineProps(["blocks"]);
+defineProps({
+  blocks: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <template>

@@ -1,19 +1,22 @@
 <script lang="ts" setup>
-const props = defineProps([
-  "title",
-  "collection_id",
-  "description",
-  "image",
-  "published_timestamp",
-  "url",
-]);
+const props = defineProps({
+  title: { type: String },
+  collection_id: { type: Number },
+  description: { type: String },
+  image: { type: String },
+  published_timestamp: { type: String },
+  url: { type: String },
+});
 
 const computedDate = computed(() => {
-  return new Date(props.published_timestamp).toLocaleDateString("en-us", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
+  return new Date(props.published_timestamp as string).toLocaleDateString(
+    "en-us",
+    {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }
+  );
 });
 </script>
 

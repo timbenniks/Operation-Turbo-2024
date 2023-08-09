@@ -15,6 +15,7 @@ export function metaData(slug: string, page: any) {
       ogType: "website",
       twitterCard: "summary_large_image",
       googleSiteVerification: "hif_cn9hF2RVSnTq5HwjSkKrXqJT9Q6BR_FaBBmr-20",
+
     };
   }
 }

@@ -1,33 +1,30 @@
 <script lang="ts" setup>
-import type {
-  ArticlesQueryVariables,
-  PageQuery,
-  PlaylistQueryVariables,
-  PageQueryVariables,
-  TalksQueryVariables,
-} from "#gql";
-
+import type { PageQuery } from "#gql";
 import type { MetaObject } from "nuxt/schema";
 import { metaData } from "../helpers";
 
-const { page } = await GqlPage(<PageQueryVariables>{ slug: "home" });
-const { talks } = await GqlTalks(<TalksQueryVariables>{ first: 5 });
-
-const articleData = await GqlArticles(<ArticlesQueryVariables>{
+const page = await useGQLQuery("page", { slug: "home" });
+const talks = await useGQLQuery("talks", { first: 5 });
+const articles = await useGQLQuery("articles", {
   username: "timbenniks",
   per_page: 5,
   collection_id: 22300,
 });
 
-const videoData = await GqlPlaylist(<PlaylistQueryVariables>{
+const videos = await useGQLQuery("videos", {
   playlist_id: "UULFbQu3ix36SHZjcD57BK7KUQ",
   per_page: 3,
 });
 
-const articles = computed(() => articleData.articledatacollection?.articles);
-const videos = computed(() => videoData.videoDataCollection?.videos);
-
 useSeoMeta(metaData("home", page as PageQuery) as MetaObject);
+
+useJsonld({
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  url: "https://timbenniks.dev",
+  name: "Tim Benniks: developer relations, video creator, speaker",
+  alternateName: "Tim Benniks",
+});
 </script>
 
 <template>
@@ -49,7 +46,7 @@ useSeoMeta(metaData("home", page as PageQuery) as MetaObject);
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <video-card
             v-for="video in videos"
-            :key="video?.videoId as string"
+            :key="(video?.videoId as string)"
             v-bind="video"
           />
         </ul>
@@ -70,7 +67,7 @@ useSeoMeta(metaData("home", page as PageQuery) as MetaObject);
           <ul>
             <article-card
               v-for="article in articles"
-              :key="article?.published_timestamp as string"
+              :key="(article?.published_timestamp as string)"
               v-bind="article"
             />
           </ul>
