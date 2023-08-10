@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://timbenniks.dev
-
-# Sitemaps
-Sitemap: https://timbenniks.dev/sitemap.xml

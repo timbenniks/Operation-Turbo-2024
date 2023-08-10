@@ -9,7 +9,18 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client', 'nuxt-jsonld'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    'nuxt-graphql-client',
+    'nuxt-jsonld',
+    'nuxt-simple-sitemap',
+    'nuxt-simple-robots'
+  ],
+
+  site: {
+    url: 'https://timbenniks.dev',
+  },
 
   googleFonts: {
     display: 'swap',
