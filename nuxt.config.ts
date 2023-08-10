@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     'nuxt-graphql-client',
     'nuxt-jsonld',
     'nuxt-simple-sitemap',
-    'nuxt-simple-robots'
+    'nuxt-simple-robots',
+    'nuxt-seo-experiments'
   ],
 
   site: {
