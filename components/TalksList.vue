@@ -15,6 +15,10 @@ const props = defineProps({
     type: String,
     default: "h3",
   },
+  columns: {
+    type: Number,
+    defaut: 1,
+  },
 });
 
 const talks = await useGQLQuery("talks", { first: props.perPage });
@@ -28,7 +32,10 @@ const talks = await useGQLQuery("talks", { first: props.perPage });
       </component>
     </header>
 
-    <ul>
+    <ul
+      class="grid gap-4 grid-cols-1"
+      :class="columns === 3 ? 'md:grid-cols-3' : ''"
+    >
       <talk-card v-for="talk in talks" :key="talk.id" v-bind="talk" />
     </ul>
   </div>
