@@ -43,6 +43,6 @@ const open = ref(false);
         >Alive and Kicking</nuxt-link
       >
     </li>
-    <li><nuxt-link to="/presskit" rel="noopener">Presskit</nuxt-link></li>
+    <li><nuxt-link to="/presskit" rel="noopener">Press kit</nuxt-link></li>
   </ul>
 </template>
