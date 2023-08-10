@@ -3,7 +3,7 @@ defineProps(["image", "alt", "loading", "basewidth"]);
 </script>
 
 <template>
-  <div class="w-full aspect-[16/9]">
+  <div class="w-full">
     <img
       :src="
         image.secure_url.replace(
@@ -14,7 +14,7 @@ defineProps(["image", "alt", "loading", "basewidth"]);
       :alt="alt || image?.context?.custom?.alt || ''"
       :width="basewidth || 960"
       :height="(basewidth || 960) * (image.height / image.width)"
-      class="fancy-image w-full object-cover"
+      class="fancy-image w-full block"
       :loading="loading || 'lazy'"
     />
   </div>

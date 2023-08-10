@@ -18,17 +18,22 @@ const computedDate = computed(() => {
     }
   );
 });
+
+const gotoUrl = (url: string) => {
+  window.open(url, "_blank");
+};
 </script>
 
 <template>
-  <li class="mb-10 flex">
+  <li class="mb-10 flex cursor-pointer" @click="gotoUrl(url as string)">
     <div class="aspect-[16/9] mr-2 w-2/5">
       <img
         :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/w_auto/${image}`"
         :alt="title"
         width="310"
         height="175"
-        class="fancy-image w-full object-contain"
+        class="fancy-image w-full object-contain aspect-[16/9]"
+        loading="lazy"
       />
     </div>
 
