@@ -31,6 +31,10 @@ const props = defineProps({
   seeAllLink: {
     type: String,
   },
+  columns: {
+    type: Number,
+    defaut: 1,
+  },
 });
 
 const options: ArticlesQueryVariables = {
@@ -65,7 +69,10 @@ const articles = await useGQLQuery("articles", options);
       </p>
     </header>
 
-    <ul>
+    <ul
+      class="grid gap-4 grid-cols-1"
+      :class="columns === 2 ? 'md:grid-cols-2' : ''"
+    >
       <article-card
         v-for="article in articles"
         :key="(article?.published_timestamp as string)"
