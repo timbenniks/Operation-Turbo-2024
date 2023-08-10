@@ -12,6 +12,14 @@ useHead({
     lang: "en",
   },
 });
+
+useJsonld({
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  url: "https://timbenniks.dev",
+  name: "Tim Benniks: developer relations, video creator, speaker",
+  alternateName: "Tim Benniks",
+});
 </script>
 
 <template>

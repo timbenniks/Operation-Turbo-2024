@@ -1,4 +1,4 @@
-query Articles($username: String!, $per_page: Int!, $collection_id: Int!) {
+query Articles($username: String!, $per_page: Int!, $collection_id: Int) {
   articledatacollection(
     username: $username
     per_page: $per_page

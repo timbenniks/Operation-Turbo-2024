@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   experimental: {
-    noVueServer: true
+    // noVueServer: true
     // componentIslands: true,
   },
   nitro: {
@@ -9,13 +9,7 @@ export default defineNuxtConfig({
     }
   },
 
-  devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-graphql-client', 'nuxt-jsonld'],
-  image: {
-    cloudinary: {
-      baseURL: 'https://res.cloudinary.com/dwfcofnrd/image/upload/'
-    }
-  },
 
   googleFonts: {
     display: 'swap',
