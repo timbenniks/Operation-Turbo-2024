@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   experimental: {
     //  noVueServer: true
-    componentIslands: true,
+    componentIslands: true
   },
   // nitro: {
   //   prerender: {
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '/speaking': { isr: true },
     '/presskit': { isr: true },
     '/alive-and-kicking': { isr: true },
-  }
+  },
 
   modules: [
     '@nuxtjs/tailwindcss',
