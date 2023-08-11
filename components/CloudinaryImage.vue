@@ -8,7 +8,7 @@ defineProps(["image", "alt", "loading", "basewidth"]);
       :src="
         image.secure_url.replace(
           `v${image.version}`,
-          'q_auto,f_auto/c_limit,w_auto'
+          'q_auto:low,f_auto/c_limit,w_auto'
         )
       "
       :alt="alt || image?.context?.custom?.alt || ''"

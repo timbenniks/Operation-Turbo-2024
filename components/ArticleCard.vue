@@ -28,7 +28,7 @@ const gotoUrl = (url: string) => {
   <li class="mb-10 flex cursor-pointer" @click="gotoUrl(url as string)">
     <div class="aspect-[16/9] mr-2 w-2/5">
       <img
-        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/c_fill,ar_16:9,w_620/${image}`"
+        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto:low,f_auto/c_fill,ar_16:9,w_620/${image}`"
         :alt="title"
         width="310"
         height="175"

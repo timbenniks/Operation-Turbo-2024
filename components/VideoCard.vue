@@ -14,7 +14,7 @@ const gotoUrl = (url: string) => {
   <li @click="gotoUrl(url)" class="cursor-pointer">
     <div class="w-full aspect-[16/9] mb-4">
       <img
-        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto,f_auto/c_fill,ar_16:9,w_620/${image}`"
+        :src="`https://res.cloudinary.com/dwfcofnrd/image/fetch/q_auto:low,f_auto/c_fill,ar_16:9,w_620/${image}`"
         :alt="title"
         width="310"
         height="175"
