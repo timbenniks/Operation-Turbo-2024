@@ -21,7 +21,12 @@ function createSourceSet(image: any, w: number, h: number) {
 </script>
 
 <template>
-  <div class="w-full">
+  <div
+    class="w-full"
+    :style="`aspect-ratio: ${basewidth || 960} / ${
+      (basewidth || 960) * (image.height / image.width)
+    }`"
+  >
     <img
       :src="
         image.secure_url.replace(
@@ -34,6 +39,9 @@ function createSourceSet(image: any, w: number, h: number) {
       :height="(basewidth || 960) * (image.height / image.width)"
       class="fancy-image w-full block"
       :loading="loading || 'lazy'"
+      :style="`aspect-ratio: ${basewidth || 960} / ${
+        (basewidth || 960) * (image.height / image.width)
+      }`"
       :srcset="
         createSourceSet(
           image,
