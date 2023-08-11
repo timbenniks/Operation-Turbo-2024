@@ -11,14 +11,14 @@ export default defineNuxtConfig({
   // },
 
   routeRules: {
-    '/': { isr: true },
-    '/about': { isr: true },
-    '/videos': { isr: true },
-    '/writing': { isr: true },
-    '/livestreams': { isr: true },
-    '/speaking': { isr: true },
-    '/presskit': { isr: true },
-    '/alive-and-kicking': { isr: true },
+    '/': { prerender: true },
+    '/about': { prerender: true },
+    '/videos': { prerender: true },
+    '/writing': { prerender: true },
+    '/livestreams': { prerender: true },
+    '/speaking': { prerender: true },
+    '/presskit': { prerender: true },
+    '/alive-and-kicking': { prerender: true },
   },
 
   modules: [
