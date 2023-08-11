@@ -10,6 +10,10 @@ a {
   @apply text-white hover:text-slate-400 hover:underline;
 }
 
+.router-link-active {
+  @apply underline;
+}
+
 .navigation a {
   transition: all 300ms;
 }

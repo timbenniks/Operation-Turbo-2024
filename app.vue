@@ -24,4 +24,5 @@ useJsonld({
 
 <template>
   <NuxtPage />
+  <GlobalFooter />
 </template>

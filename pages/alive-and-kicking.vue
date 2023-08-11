@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-const slug = "about";
-const title = "About Tim";
+const slug = "alive-and-kicking";
+const title = "Alive and kicking";
 
 await useMetaData(slug);
 </script>
