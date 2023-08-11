@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      crawlLinks: true
+      crawlLinks: true,
+      concurrency: 1
     }
   },
 
