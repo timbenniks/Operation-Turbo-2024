@@ -10,6 +10,17 @@ await useMetaData(slug);
     <main class="pr-4 md:pr-12 pt-6">
       <page-header :title="title" :slug="slug" />
       <blocks-list :slug="slug" />
+      <speaker-details />
+
+      <speaker-media />
+
+      <talks-list
+        playlist-id="PLkmdKA3C-iOOvftzsLWsfTy6X7MoteT5e"
+        :per-page="100"
+        title="Talks"
+        :show-per-page="false"
+        :columns="3"
+      />
     </main>
   </div>
 </template>
