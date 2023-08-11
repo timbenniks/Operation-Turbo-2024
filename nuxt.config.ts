@@ -1,8 +1,8 @@
 export default defineNuxtConfig({
-  // experimental: {
-  //   noVueServer: true,
-  //   componentIslands: true
-  // },
+  experimental: {
+    //componentIslands: true
+    noScripts: true
+  },
   nitro: {
     prerender: {
       crawlLinks: true,
