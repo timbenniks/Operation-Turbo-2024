@@ -3,23 +3,23 @@ export default defineNuxtConfig({
     //  noVueServer: true
     componentIslands: true
   },
-  // nitro: {
-  //   prerender: {
-  //     crawlLinks: true,
-  //     concurrency: 1
-  //   }
-  // },
-
-  routeRules: {
-    '/': { prerender: true },
-    '/about': { prerender: true },
-    '/videos': { prerender: true },
-    '/writing': { prerender: true },
-    '/livestreams': { prerender: true },
-    '/speaking': { prerender: true },
-    '/presskit': { prerender: true },
-    '/alive-and-kicking': { prerender: true },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      concurrency: 1
+    }
   },
+
+  // routeRules: {
+  //   '/': { isr: true },
+  //   '/about': { isr: true },
+  //   '/videos': { isr: true },
+  //   '/writing': { isr: true },
+  //   '/livestreams': { isr: true },
+  //   '/speaking': { isr: true },
+  //   '/presskit': { isr: true },
+  //   '/alive-and-kicking': { isr: true },
+  // },
 
   modules: [
     '@nuxtjs/tailwindcss',
