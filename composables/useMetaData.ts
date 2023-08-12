@@ -13,6 +13,9 @@ export async function useMetaData(slug: string) {
     ogSiteName: "Tim Benniks",
     ogType: "website",
     twitterCard: "summary_large_image",
+    twitterCreator: "Tim Benniks",
+    twitterDescription: page?.ogDescription,
+    twitterSite: "https://timbenniks.dev/",
     googleSiteVerification: "hif_cn9hF2RVSnTq5HwjSkKrXqJT9Q6BR_FaBBmr-20",
   });
 }
