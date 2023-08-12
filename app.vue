@@ -11,12 +11,6 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
-  link: [
-    {
-      rel: "preconnect",
-      href: "https://res.cloudinary.com",
-    },
-  ],
   script: [
     {
       src: "https://plausible.io/js/plausible.js",
