@@ -1,6 +1,8 @@
 query Pages {
-  pages {
-    slug
+  pages(orderBy: navigationOrder_ASC) {
+    id
     navigationLabel
+    navigationOrder
+    slug
   }
 }
