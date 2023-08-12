@@ -6,8 +6,8 @@
   </h2>
   <p>
     Developer Relations Lead for outreach and awareness at
-    <a href="#" rel="noopener" title="Nope" target="_blank" class="underline"
-      >Nope</a
+    <a href="#" rel="noopener" title="TBA" target="_blank" class="underline"
+      >to be announced</a
     >.
   </p>
 </template>
