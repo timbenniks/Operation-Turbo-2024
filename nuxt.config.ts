@@ -47,7 +47,7 @@ export default defineNuxtConfig({
       lang: 'en',
       useWebmanifestExtension: false
     }
-  }
+  },
 
   googleFonts: {
     display: 'swap',
