@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     'nuxt-simple-robots',
     'nuxt-seo-experiments'
-
   ],
 
   buildModules: [
@@ -40,6 +39,15 @@ export default defineNuxtConfig({
   site: {
     url: 'https://timbenniks.dev',
   },
+
+  pwa: {
+    manifest: {
+      name: 'Tim Benniks',
+      short_name: "Tim Benniks",
+      lang: 'en',
+      useWebmanifestExtension: false
+    }
+  }
 
   googleFonts: {
     display: 'swap',
