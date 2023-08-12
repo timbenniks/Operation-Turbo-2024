@@ -30,6 +30,11 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     'nuxt-simple-robots',
     'nuxt-seo-experiments'
+
+  ],
+
+  buildModules: [
+    '@nuxtjs/pwa'
   ],
 
   site: {
