@@ -1,26 +1,11 @@
 export default defineNuxtConfig({
   experimental: {
-    //componentIslands: true
     noScripts: true
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      interval: 1000,
-      concurrency: 1
-    }
-  },
 
-  // routeRules: {
-  //   '/': { isr: true },
-  //   '/about': { isr: true },
-  //   '/videos': { isr: true },
-  //   '/writing': { isr: true },
-  //   '/livestreams': { isr: true },
-  //   '/speaking': { isr: true },
-  //   '/presskit': { isr: true },
-  //   '/alive-and-kicking': { isr: true },
-  // },
+  routeRules: {
+    '/**': { isr: true }
+  },
 
   modules: [
     '@nuxtjs/tailwindcss',
