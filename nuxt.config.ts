@@ -24,7 +24,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts',
     'nuxt-graphql-client',
     'nuxt-jsonld',
     'nuxt-simple-sitemap',
@@ -48,14 +47,4 @@ export default defineNuxtConfig({
       useWebmanifestExtension: false
     }
   },
-
-  googleFonts: {
-    display: 'swap',
-    prefetch: true,
-    preconnect: true,
-
-    families: {
-      Inter: [400, 500, 700],
-    }
-  }
 })

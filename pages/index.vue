@@ -13,19 +13,16 @@ await useMetaData("home");
 
     <main class="pr-4 md:pr-12 pt-6">
       <blocks-list slug="home" />
-
       <videos-list
         playlist-id="UULFbQu3ix36SHZjcD57BK7KUQ"
         :per-page="3"
         header-type="h2"
         title="Latest videos"
       />
-
       <two-column>
         <template v-slot:sidea>
           <talks-list :per-page="5" title="Latest Talks" />
         </template>
-
         <template v-slot:sideb>
           <articles-list
             username="timbenniks"
