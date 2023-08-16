@@ -7,6 +7,10 @@ useHead({
       content:
         "sec-ch-width https://res.cloudinary.com; sec-ch-dpr https://res.cloudinary.com; sec-ch-viewport-width https://res.cloudinary.com;",
     },
+    {
+      name: "theme-color",
+      content: "#ec4899",
+    },
   ],
   htmlAttrs: {
     lang: "en",

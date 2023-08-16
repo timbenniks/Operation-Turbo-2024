@@ -38,7 +38,7 @@ export default defineNuxtConfig({
       name: 'Tim Benniks',
       short_name: "timbenniks",
       description: 'Tim Benniks personal website',
-      theme_color: '#ffffff',
+      theme_color: '#ec4899',
       icons: [
         {
           src: 'pwa-64x64.png',
