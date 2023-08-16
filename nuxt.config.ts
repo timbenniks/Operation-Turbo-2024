@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
-  experimental: {
-    noScripts: true
-  },
+  // experimental: {
+  //   noScripts: true
+  // },
 
   routeRules: {
     '/': { isr: true },
