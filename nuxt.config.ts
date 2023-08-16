@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Tim Benniks',
       short_name: "timbenniks",
-      description: 'Tim Benniks personal website',
+      description: 'Tim Benniks: developer relations, video creator, speaker',
       theme_color: '#ec4899',
       icons: [
         {
