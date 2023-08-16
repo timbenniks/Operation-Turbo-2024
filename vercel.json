@@ -714,6 +714,11 @@
       "permanent": true
     },
     {
+      "source": "/writings/i-turned-my-career-on-its-head",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/writings/:id",
       "destination": "/",
       "permanent": true
