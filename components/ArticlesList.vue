@@ -45,6 +45,7 @@ const options: ArticlesQueryVariables = {
 if (props.collectionId) {
   options.collection_id = props.collectionId;
 }
+
 const articles = await useGQLQuery("articles", options);
 </script>
 

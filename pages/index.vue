@@ -26,7 +26,6 @@ await useMetaData("home");
         <template v-slot:sideb>
           <articles-list
             username="timbenniks"
-            :collection-id="22300"
             :per-page="5"
             title="Latest Articles"
           />
