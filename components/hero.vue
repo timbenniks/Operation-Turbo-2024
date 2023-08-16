@@ -6,8 +6,13 @@
   </h2>
   <p>
     Developer Relations Lead for outreach and awareness at
-    <a href="#" rel="noopener" title="TBA" target="_blank" class="underline"
-      >to be announced</a
+    <a
+      href="https://hygraph.com"
+      rel="noopener"
+      title="Hygraph"
+      target="_blank"
+      class="underline"
+      >Hygraph</a
     >.
   </p>
 </template>

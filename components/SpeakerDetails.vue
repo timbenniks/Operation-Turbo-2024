@@ -3,15 +3,15 @@ const deets = [
   { label: "Name", val: "Tim Benniks" },
   {
     label: "Company",
-    val: "to be announced",
-    link: "https://to be announced.nope",
+    val: "Hygraph",
+    link: "https://hygraph.com",
   },
   {
     label: "Title",
     val: "Developer Relations Lead for outreach and awareness",
   },
   { label: "Location", val: "Greater Toulouse Metropolitan Area, France" },
-  { label: "E-mail", val: "tim@to be announced.nope" },
+  { label: "E-mail", val: "timbenniks.dev@gmail.com" },
   {
     label: "Website",
     val: "https://timbenniks.dev",
