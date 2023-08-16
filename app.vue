@@ -31,6 +31,7 @@ useJsonld({
 </script>
 
 <template>
+  <VitePwaManifest />
   <NuxtPage />
   <GlobalFooter />
 </template>
