@@ -2,7 +2,8 @@
 const slug = "alive-and-kicking";
 const title = "Alive and kicking";
 
-await useMetaData(slug);
+const page = await useGQLQuery("page", { slug });
+useOGTags(page);
 </script>
 
 <template>

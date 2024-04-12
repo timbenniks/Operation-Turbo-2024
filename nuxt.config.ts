@@ -1,4 +1,14 @@
 export default defineNuxtConfig({
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-graphql-client',
+    'nuxt-jsonld',
+    'nuxt-simple-sitemap',
+    'nuxt-simple-robots',
+    'nuxt-seo-experiments',
+    '@vite-pwa/nuxt'
+  ],
+
   experimental: {
     noScripts: true
   },
@@ -13,16 +23,6 @@ export default defineNuxtConfig({
     '/presskit': { isr: true },
     '/alive-and-kicking': { isr: true },
   },
-
-  modules: [
-    '@nuxtjs/tailwindcss',
-    'nuxt-graphql-client',
-    'nuxt-jsonld',
-    'nuxt-simple-sitemap',
-    'nuxt-simple-robots',
-    'nuxt-seo-experiments',
-    '@vite-pwa/nuxt'
-  ],
 
   site: {
     url: 'https://timbenniks.dev',

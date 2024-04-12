@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-await useMetaData("home");
+const page = await useGQLQuery("page", { slug: "home" });
+useOGTags(page);
 </script>
 
 <template>
@@ -19,6 +20,7 @@ await useMetaData("home");
         header-type="h2"
         title="Latest videos"
       />
+      
       <two-column>
         <template v-slot:sidea>
           <talks-list :per-page="5" title="Latest Talks" />

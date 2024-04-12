@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 const slug = "speaking";
 const title = "Speaking";
-await useMetaData(slug);
+const page = await useGQLQuery("page", { slug });
+useOGTags(page);
 </script>
 
 <template>

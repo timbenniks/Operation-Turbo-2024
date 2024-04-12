@@ -1,7 +1,5 @@
-export async function useMetaData(slug: string) {
-  const page = await useGQLQuery("page", { slug });
-
-  useSeoMeta({
+export async function useOGTags(page: any) {
+  return useSeoMeta({
     title: page?.ogTitle,
     ogTitle: page?.ogTitle,
     description: page?.ogDescription,

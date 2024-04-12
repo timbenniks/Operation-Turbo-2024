@@ -2,7 +2,8 @@
 const slug = "presskit";
 const title = "Press kit";
 
-await useMetaData(slug);
+const page = await useGQLQuery("page", { slug });
+useOGTags(page);
 </script>
 
 <template>

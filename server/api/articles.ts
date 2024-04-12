@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
       description: article.description,
       published_timestamp: article.published_timestamp,
       collection_id: article.collection_id,
-      image: article.cover_image.split("w_1000/")[1]
+      image: article.social_image
     }
   })
 
